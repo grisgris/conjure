@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packager minify="true" alias="conjure.phar" destination="bin/conjure.phar">
+	<code stub="src/stub.php">
+		<folder localPath="src" recursive="true">src</folder>
+
+		<skeleton version="application" localPath="lib" repository="https://github.com/LouisLandry/skeleton.git">
+			<packages>
+				<package name="application" />
+				<package name="compat" />
+				<package name="controller" />
+				<package name="event" />
+				<package name="identity" />
+				<package name="input" />
+				<package name="language" />
+				<package name="provider" />
+				<package name="registry" />
+				<package name="uri" />
+			</packages>
+		</skeleton>
+	</code>	
+
+	<metadata>
+		<element name="version" value="1.0" />
+		<element name="authors">
+			<element name="Gris-Gris Developers">
+				<element name="email" value="hoodoo@grisgr.is" />
+			</element>
+		</element>
+	</metadata>
+</packager>
