@@ -39,7 +39,7 @@ class Package extends Command
 	{
 		// Check on some basic inputs.
 		$quiet = $this->input->getBool('q', false);
-		$manifestPath = $this->input->getString('f', $this->application->get('cwd') . '/conjure.xml');
+		$manifestPath = $this->input->getString('f', $this->application->get('cwd', realpath(getcwd())) . '/conjure.xml');
 
 		$quiet or $this->application->out();
 		$quiet or $this->application->out('Conjuring a package.');
